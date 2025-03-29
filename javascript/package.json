@@ -1,0 +1,47 @@
+{
+  "name": "your-sdk-name",
+  "version": "1.0.0",
+  "description": "Description of your SDK",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "sdk",
+    "sse",
+    "client",
+    "server"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^4.38.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/your-repo.git"
+  },
+  "dependencies": {
+    "content-type": "^1.0.5",
+    "eventsource": "^3.0.6",
+    "raw-body": "^3.0.0"
+  }
+}
