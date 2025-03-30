@@ -1,0 +1,53 @@
+{
+  "name": "litemcpjs",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "sdk",
+    "sse",
+    "client",
+    "server",
+    "mcp",
+    "modelcontextprotocol",
+    "lite-mcp-sdk",
+    "lite-mcp-sdk-javascript",
+    "javascript"
+  ],
+  "author": "Borui Cai",
+  "license": "MIT",
+  "description": "Lite mcp for javascript is the **BEST** yet way to start a REMOTE **SSE** javascript MCP server and Client.",
+  "dependencies": {
+    "lite-mcp-sdk": "^0.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^4.38.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/S2thend/Lite_MCP_sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/S2thend/Lite_MCP_sdk/issues"
+  },
+  "homepage": "https://github.com/S2thend/Lite_MCP_sdk#readme"
+}
