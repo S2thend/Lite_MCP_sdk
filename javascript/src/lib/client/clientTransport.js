@@ -143,7 +143,7 @@ export class SSEClientTransport{
       };
 
       const response = await fetch(this._endpoint, init);
-      console.log("POST response", response);
+      // console.log("POST response", response);
       if (!response.ok) {
         const text = await response.text().catch(() => null);
         throw new Error(

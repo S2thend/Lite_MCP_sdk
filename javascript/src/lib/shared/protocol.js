@@ -63,15 +63,15 @@ export class Protocol {
         };
 
         this._transport.onmessage = (message) => {
-            console.log("onmessage", message);
+            // console.log("onmessage", message);
             if (!("method" in message)) {
-                console.log("onresponse", message);
+                // console.log("onresponse", message);
                 this._onresponse(message);
             } else if ("id" in message) {
-                console.log("onrequest", message);
+                // console.log("onrequest", message);
                 this._onrequest(message);
             } else {
-                console.log("onnotification", message);
+                // console.log("onnotification", message);
                 this._onnotification(message);
             }
         };
@@ -131,7 +131,7 @@ export class Protocol {
             this.fallbackRequestHandler;
 
         if (handler === undefined) {
-            console.log("handler undefined");
+            // console.log("handler undefined");
             if (this._transport) {
                 this._transport
                     .send({
@@ -159,20 +159,20 @@ export class Protocol {
             signal: abortController.signal,
             sessionId: this._transport ? this._transport.sessionId : null,
         };
-        console.log("extra", extra);
+        // console.log("extra", extra);
         // Starting with Promise.resolve() puts any synchronous errors into the monad as well.
         Promise.resolve()
             .then(() => handler(request, extra))
             .then(
                 (result) => {
-                    console.log("result", result);
+                    // console.log("result", result);
                     if (abortController.signal.aborted) {
-                        console.log("abortController.signal.aborted");
+                        // console.log("abortController.signal.aborted");
                         return;
                     }
 
                     if (this._transport) {
-                        console.log("sending result");
+                        // console.log("sending result");
                         return this._transport.send({
                             result,
                             jsonrpc: "2.0",
@@ -182,7 +182,7 @@ export class Protocol {
                     return;
                 },
                 (error) => {
-                    console.log("error", error);
+                    // console.log("error", error);
                     if (abortController.signal.aborted) {
                         return;
                     }
@@ -228,9 +228,9 @@ export class Protocol {
     _onresponse(response) {
         const messageId = Number(response.id);
         const handler = this._responseHandlers.get(messageId);
-        console.log("onresponse", response);
+        // console.log("onresponse", response);
         if (handler === undefined) {
-            console.log("handler undefined");
+            // console.log("handler undefined");
             this._onerror(
                 new Error(
                     `Received a response for an unknown message ID: ${JSON.stringify(response)}`,
@@ -244,13 +244,13 @@ export class Protocol {
 
 
         if ("result" in response) {
-            console.log("result in response");
+            // console.log("result in response");
             handler(response);
         } else {
             const error = new Error(
                 response.error.code + " " + response.error.message + " " + response.error.data,
             );
-            console.log("error in response", error);
+            // console.log("error in response", error);
             handler(error);
         }
     }

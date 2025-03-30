@@ -38,9 +38,9 @@ export class SSEServerTransport {
    * This should be called when a GET request is made to establish the SSE stream.
    */
   async start() {
-    console.log("start");
+    // console.log("start");
     if (this._sseResponse) {
-      console.log("SSEServerTransport already started! If using Server class, note that connect() calls start() automatically.");
+      // console.log("SSEServerTransport already started! If using Server class, note that connect() calls start() automatically.");
       throw new Error(
         "SSEServerTransport already started! If using Server class, note that connect() calls start() automatically.",
       );
@@ -111,7 +111,7 @@ export class SSEServerTransport {
 
     try {
       const parsedMessage = typeof body === 'string' ? JSON.parse(body) : body;
-      console.log("handleMessage", parsedMessage);
+      // console.log("handleMessage", parsedMessage);
       await this.handleMessage(parsedMessage);
     } catch {
       res.writeHead(400).end(`Invalid message: ${body}`);
@@ -125,16 +125,16 @@ export class SSEServerTransport {
    * Handle a client message, regardless of how it arrived. This can be used to inform the server of messages that arrive via a means different than HTTP POST.
    */
   async handleMessage(message, validator = res => res) {
-    console.log("handleMessage", message);
+    // console.log("handleMessage", message);
     let validatedMessage;
     try {
       validatedMessage = validator(message);
-      console.log("validatedMessage", validatedMessage);
+      // console.log("validatedMessage", validatedMessage);
     } catch (error) {
       this.onerror(error);
       throw error;
     }
-    console.log("onmessage", this.onmessage);
+    // console.log("onmessage", this.onmessage);
     this.onmessage(validatedMessage);
   }
 
