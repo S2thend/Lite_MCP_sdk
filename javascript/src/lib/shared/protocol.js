@@ -1,5 +1,5 @@
 import CapabilityValidators from "./validators/capabilityValidators.js";
-import { NOTIFICATION_METHOD_NAMES, REQUEST_METHOD_NAMES } from "./helpers/constants.js";
+import { NOTIFICATION_METHOD_NAMES, REQUEST_METHOD_NAMES, ErrorCode } from "./helpers/constants.js";
 
 
 export class Protocol {
