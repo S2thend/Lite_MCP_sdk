@@ -1,7 +1,26 @@
-class CapabilityValidators {
+class CapabilityValidatorsClass {
 
     constructor(serverCapabilities) {
         this._serverCapabilities = serverCapabilities;
+        this.SAMPLING_METHOD = "sampling/createMessage";
+        this.ROOTS_METHOD = "roots/list";
+        this.LOGGING_METHOD = "logging/setLevel";
+        this.PROMPTS_METHOD = "prompts/get";
+        this.PROMPTS_LIST_METHOD = "prompts/list";
+        this.RESOURCES_LIST_METHOD = "resources/list";
+        this.RESOURCES_READ_METHOD = "resources/read";
+        this.TOOLS_CALL_METHOD = "tools/call";
+        this.TOOLS_LIST_METHOD = "tools/list";
+        this.PING_METHOD = "ping";
+        this.INITIALIZE_METHOD = "initialize";
+        this.NOTIFICATIONS_MESSAGE_METHOD = "notifications/message";
+        this.NOTIFICATIONS_RESOURCES_UPDATED_METHOD = "notifications/resources/updated";
+        this.NOTIFICATIONS_RESOURCES_LIST_CHANGED_METHOD = "notifications/resources/list_changed";
+        this.NOTIFICATIONS_TOOLS_LIST_CHANGED_METHOD = "notifications/tools/list_changed";
+        this.NOTIFICATIONS_PROMPTS_LIST_CHANGED_METHOD = "notifications/prompts/list_changed";
+        this.NOTIFICATIONS_CANCELLED_METHOD = "notifications/cancelled";
+        this.NOTIFICATIONS_PROGRESS_METHOD = "notifications/progress";
+        this.NOTIFICATIONS_LOGGING_METHOD = "notifications/logging";
     }
 
     assertCapability(
@@ -103,6 +122,6 @@ class CapabilityValidators {
     }
 }
 
-CapabilityValidators = new CapabilityValidators();
+const CapabilityValidators = new CapabilityValidatorsClass();
 
 export default CapabilityValidators;

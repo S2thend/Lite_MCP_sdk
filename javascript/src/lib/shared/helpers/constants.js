@@ -15,19 +15,19 @@ const REQUEST_METHOD_NAMES = {
     promptsList: "prompts/list",
 }
 
-export const LATEST_PROTOCOL_VERSION = "2024-11-05";
-export const SUPPORTED_PROTOCOL_VERSIONS = [
+const LATEST_PROTOCOL_VERSION = "2024-11-05";
+const SUPPORTED_PROTOCOL_VERSIONS = [
   LATEST_PROTOCOL_VERSION,
   "2024-10-07",
 ];
 
 /* JSON-RPC types */
-export const JSONRPC_VERSION = "2.0";
+const JSONRPC_VERSION = "2.0";
 
 /**
  * Error codes defined by the JSON-RPC specification.
  */
-export const ErrorCode = {
+const ErrorCode = {
     // SDK error codes
     ConnectionClosed: -32000,
     RequestTimeout: -32001,
@@ -40,4 +40,11 @@ export const ErrorCode = {
     InternalError: -32603,
   }
 
-export { NOTIFICATION_METHOD_NAMES, REQUEST_METHOD_NAMES, ErrorCode, JSONRPC_VERSION, LATEST_PROTOCOL_VERSION, SUPPORTED_PROTOCOL_VERSIONS };
+export { 
+    NOTIFICATION_METHOD_NAMES, 
+    REQUEST_METHOD_NAMES, 
+    ErrorCode, 
+    JSONRPC_VERSION, 
+    LATEST_PROTOCOL_VERSION, 
+    SUPPORTED_PROTOCOL_VERSIONS 
+};
