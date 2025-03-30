@@ -1,26 +1,14 @@
-## Lite mcp for javascript Introduction
-[![npm badge](https://img.shields.io/badge/npm-0.1.0-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
+## Lite mcp sdk for javascript Introduction
+[![npm badge](https://img.shields.io/badge/npm-0.1.4-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
 [![compatibility badge](https://img.shields.io/badge/compatibility->=ES6-blue.svg)](https://shields.io/)
 [![License badge](https://img.shields.io/badge/License-MIT-<COLOR>.svg)](https://shields.io/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
-
-
-Lite mcp for javascript is the **BEST** yet way to start a REMOTE **SSE** 
-javascript MCP server and Client.
-
-## 🚀 Quick start
-
-```bash
-npm install lite-mcp
-```
-
-## Lite mcp sdk for javascript Introduction
 
 For Anyone wants a little **more low level control** over the MCP protocol:
 
 Lite mcp sdk for javascript is a lightweight mcp sdk **remix** with minimal dependencies.
 
-## Quick start
+### 🚀 Quick start
 
 ```bash
 npm install lite-mcp-sdk
@@ -206,5 +194,5 @@ Please read the [contributing document](https://github.com/S2thend/Lite_MCP_sdk/
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Inspired by Original anthropic sdk,which license is also included [here](./docs/misc/MCP_TS_SDK_LICENSE_ANTHROPIC).
+Inspired by Original anthropic sdk,which license is also included [here](../docs/misc/MCP_TS_SDK_LICENSE_ANTHROPIC).
 

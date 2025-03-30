@@ -1,7 +1,7 @@
 {
-  "name": "your-sdk-name",
-  "version": "1.0.0",
-  "description": "Description of your SDK",
+  "name": "lite-mcp-sdk",
+  "version": "0.1.2",
+  "description": "Light Weight Easy to useMCP SDK",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -22,9 +22,14 @@
     "sdk",
     "sse",
     "client",
-    "server"
+    "server",
+    "mcp",
+    "modelcontextprotocol",
+    "lite-mcp-sdk",
+    "lite-mcp-sdk-javascript",
+    "javascript"
   ],
-  "author": "Your Name",
+  "author": "Borui Cai",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.27.0",
@@ -37,11 +42,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/your-repo.git"
+    "url": "https://github.com/S2thend/Lite_MCP_sdk"
   },
   "dependencies": {
     "content-type": "^1.0.5",
     "eventsource": "^3.0.6",
     "raw-body": "^3.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/S2thend/Lite_MCP_sdk/issues"
+  },
+  "homepage": "https://github.com/S2thend/Lite_MCP_sdk#readme"
 }
