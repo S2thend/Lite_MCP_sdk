@@ -25,14 +25,14 @@ REAL **COPY AND PASTE** experince for you to get started with MCP.
 
 ### Installation
 ```bash
-npm install lite-mcp
+npm install litemcpjs
 npm install express
 npm install cors
 ```
 
 ### Build a SSE MCP client under 5 lines
 ```javascript
-import { MCPClient } from "lite-mcp";
+import { MCPClient } from "litemcpjs";
 
 async function main() {
   const client = new MCPClient("http://localhost:3000") // change this to your server url
@@ -47,7 +47,7 @@ main();
 
 ### Start a REMOTE MCP SSE server with expressJS
 ```javascript
-const { MCPServerInit } = require("lite-mcp");
+const { MCPServerInit } = require("litemcpjs");
 
 // define the tools
 const TOOLS = [
@@ -291,3 +291,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Inspired by Original anthropic sdk,which license is also included [here](./docs/misc/MCP_TS_SDK_LICENSE_ANTHROPIC).
 
+## Contact
+
+If you have any questions or suggestions, please leave a comment [here](https://github.com/S2thend/Lite_MCP_sdk/issues/3).
+Or contact me via email: borui_cai@qq.com
+
+## Projects using lite-mcp-sdk (to add)

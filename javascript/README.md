@@ -182,6 +182,7 @@ How timeout is used in original sdk is vague and has some redundant implementati
 - [ ] Add dashboard for monitoring and managing the MCP server and client
 - [ ] Add ts types
 - [ ] Add python sdk
+- [ ] Add version compatibility handle for different versions of MCP
 
 
 ## 🤝 Contributing
