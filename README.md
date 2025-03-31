@@ -262,6 +262,102 @@ const validatedMessage = validator(message);
 
 How timeout is used in original sdk is vague and has some redundant implementations,which are removed in lite mcp for not causing further confusion.(Ok I think they also removed these in latest version)
 
+### 3. More detailed documentation on how to quickly get started
+They actually listed this problem in the official roadmap. lol
+![](./docs/images/from_official_roadmap_mcp_lack_of_document.png)
+
+Lite MCP SDK provides better documentation on how to use and modify the sdk, with more ready to copy code examples.
+
+### 4. Cleaner architecthure with only core functionalities
+Lite MCP SDK:
+```shell
+src
+├── index.js
+└── lib
+    ├── client
+    │   ├── client.js
+    │   └── clientTransport.js
+    ├── server
+    │   ├── server.js
+    │   └── serverTransport.js
+    └── shared
+        ├── helpers
+        │   ├── constants.js
+        │   └── util.js
+        ├── protocol.js
+        └── validators
+            ├── capabilityValidators.js
+            └── schemaValidators.js (IN CONSTRUCTION)
+```
+Official sdk:
+Although it is listed on the roadmap, I think putting auth in this project is poor product design. 
+![](./docs/images/from_roadmap_remote_support.png)
+Honestly I think left users to handle auth problem provides more flexibility and better dev experience.
+```shell
+src/
+├── client
+│   ├── auth.test.ts
+│   ├── auth.ts
+│   ├── cross-spawn.test.ts
+│   ├── index.test.ts
+│   ├── index.ts
+│   ├── sse.test.ts
+│   ├── sse.ts
+│   ├── stdio.test.ts
+│   ├── stdio.ts
+│   └── websocket.ts
+├── cli.ts
+├── inMemory.test.ts
+├── inMemory.ts
+├── integration-tests
+│   └── process-cleanup.test.ts
+├── server
+│   ├── auth
+│   │   ├── clients.ts
+│   │   ├── errors.ts
+│   │   ├── handlers
+│   │   │   ├── authorize.test.ts
+│   │   │   ├── authorize.ts
+│   │   │   ├── metadata.test.ts
+│   │   │   ├── metadata.ts
+│   │   │   ├── register.test.ts
+│   │   │   ├── register.ts
+│   │   │   ├── revoke.test.ts
+│   │   │   ├── revoke.ts
+│   │   │   ├── token.test.ts
+│   │   │   └── token.ts
+│   │   ├── middleware
+│   │   │   ├── allowedMethods.test.ts
+│   │   │   ├── allowedMethods.ts
+│   │   │   ├── bearerAuth.test.ts
+│   │   │   ├── bearerAuth.ts
+│   │   │   ├── clientAuth.test.ts
+│   │   │   └── clientAuth.ts
+│   │   ├── provider.ts
+│   │   ├── router.test.ts
+│   │   ├── router.ts
+│   │   └── types.ts
+│   ├── completable.test.ts
+│   ├── completable.ts
+│   ├── index.test.ts
+│   ├── index.ts
+│   ├── mcp.test.ts
+│   ├── mcp.ts
+│   ├── sse.ts
+│   ├── stdio.test.ts
+│   └── stdio.ts
+├── shared
+│   ├── auth.ts
+│   ├── protocol.test.ts
+│   ├── protocol.ts
+│   ├── stdio.test.ts
+│   ├── stdio.ts
+│   ├── transport.ts
+│   ├── uriTemplate.test.ts
+│   └── uriTemplate.ts
+└── types.ts
+```
+
 ### Key Difference Table
 
 | Feature | mcp-official-sdk | lite-mcp-sdk |
@@ -269,6 +365,9 @@ How timeout is used in original sdk is vague and has some redundant implementati
 | Validation | zod | Validators |
 | Transport | stdio or SSE | SSE only |
 | Language | typescript | javascript |
+| Auth | included | optional |
+| Documentation | vague | clear |
+| Architecture | complex | lightweight |
 
 
 ## 🗺️ Roadmap
