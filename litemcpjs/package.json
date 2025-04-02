@@ -1,13 +1,13 @@
 {
   "name": "litemcpjs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/litemcp.cjs",
+  "module": "./dist/litemcp.mjs",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/litemcp.mjs",
+      "require": "./dist/litemcp.cjs"
     }
   },
   "scripts": {
