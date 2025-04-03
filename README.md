@@ -11,7 +11,7 @@ The goal of this project is to make best of the AI Agent tech available to any *
 Because I want the project to condense on the running logics, rather than distracted by the types.
 
 ## Lite mcp for javascript Introduction
-[![npm badge](https://img.shields.io/badge/npm-0.1.0-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
+[![npm badge](https://img.shields.io/badge/npm-0.1.6-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
 [![compatibility badge](https://img.shields.io/badge/compatibility->=ES6-blue.svg)](https://shields.io/)
 [![License badge](https://img.shields.io/badge/License-MIT-<COLOR>.svg)](https://shields.io/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
@@ -93,7 +93,7 @@ const MCPServer = MCPServerInit(
 
 
 ## Lite mcp sdk for javascript Introduction
-[![npm badge](https://img.shields.io/badge/npm-0.1.3-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
+[![npm badge](https://img.shields.io/badge/npm-0.1.5-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
 [![compatibility badge](https://img.shields.io/badge/compatibility->=ES6-blue.svg)](https://shields.io/)
 [![License badge](https://img.shields.io/badge/License-MIT-<COLOR>.svg)](https://shields.io/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
