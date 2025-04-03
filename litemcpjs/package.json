@@ -1,13 +1,16 @@
 {
   "name": "litemcpjs",
-  "version": "0.1.1",
+  "version": "0.1.6",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/litemcp.cjs",
+  "module": "./dist/litemcp.mjs",
+  "browser": {
+    "./dist/litemcp.mjs": "./dist/litemcp_broswer.mjs"
+  },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/litemcp.mjs",
+      "require": "./dist/litemcp.cjs"
     }
   },
   "scripts": {
@@ -32,7 +35,7 @@
   "license": "MIT",
   "description": "Lite mcp for javascript is the **BEST** yet way to start a REMOTE **SSE** javascript MCP server and Client.",
   "dependencies": {
-    "lite-mcp-sdk": "^0.1.2"
+    "lite-mcp-sdk": "^0.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",

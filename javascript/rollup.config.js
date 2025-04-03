@@ -46,5 +46,15 @@ export default [
       ...commonPlugins,
       commonjs()
     ]
-  }
+  },
+  // Browser build
+  {
+    input: 'src/browser.js',
+    output: {
+      file: 'dist/browser.mjs',
+      format: 'esm'
+    },
+    external,
+    plugins: commonPlugins
+  },
 ];

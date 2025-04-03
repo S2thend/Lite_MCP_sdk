@@ -46,5 +46,15 @@ export default [
       ...commonPlugins,
       commonjs()
     ]
+  },
+  // Browser build
+  {
+    input: 'litemcp_broswer.js',
+    output: {
+      file: 'dist/litemcp_broswer.mjs',
+      format: 'esm'
+    },
+    external,
+    plugins: commonPlugins
   }
 ];

@@ -1,10 +1,13 @@
 {
   "name": "lite-mcp-sdk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Light Weight Easy to useMCP SDK",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
+  "browser": {
+      "./dist/index.mjs": "./dist/browser.mjs"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",

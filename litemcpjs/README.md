@@ -1,5 +1,5 @@
 ## Lite mcp for javascript Introduction
-[![npm badge](https://img.shields.io/badge/npm-0.1.0-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
+[![npm badge](https://img.shields.io/badge/npm-0.1.6-blue.svg)](https://www.npmjs.com/package/lite-mcp-sdk)
 [![compatibility badge](https://img.shields.io/badge/compatibility->=ES6-blue.svg)](https://shields.io/)
 [![License badge](https://img.shields.io/badge/License-MIT-<COLOR>.svg)](https://shields.io/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
