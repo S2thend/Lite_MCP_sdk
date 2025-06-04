@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/s2thend-lite-mcp-sdk-badge.png)](https://mseep.ai/app/s2thend-lite-mcp-sdk)
+
 ## Introduction
 
 This repo now includes 2 parts:
